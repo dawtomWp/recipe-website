@@ -1,0 +1,171 @@
+:root {
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+  --brown800: hsl(14, 45%, 36%);
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Outfit"; /* Give your font a unique name */
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "YoungSerif"; /* Give your font a unique name */
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "YoungSerif";
+}
+
+body {
+  background-color: var(--stone100);
+  font-family: "Outfit";
+}
+
+.content {
+  background-color: var(--white);
+  width: 50%;
+  padding: 40px;
+  margin: 60px auto;
+  border-radius: 25px;
+}
+.banner-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.banner-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--stone900);
+  letter-spacing: 2px;
+}
+
+.content-preparation {
+  background-color: var(--rose50);
+  padding: 20px 30px;
+  margin: 32px 0;
+}
+.preparation-title {
+  color: var(--rose800);
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.preparation-list {
+  margin-left: 20px;
+  color: var(--stone600);
+}
+.preparation-list-item {
+  margin: 18px 0;
+}
+
+.Ingredients-title,
+.instructions-title,
+.nutrition-title {
+  color: var(--brown800);
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.Ingredients-list {
+  color: var(--stone900);
+  margin: 20px 0;
+  margin-left: 20px;
+}
+.Ingredients-list-item {
+  margin: 18px 0;
+  padding-left: 10px;
+}
+
+.ingredients-line,
+.instructions-line {
+  margin-top: 36px;
+  margin-bottom: 20px;
+  border: 1px solid var(--stone150);
+}
+
+.instructions-list {
+  color: var(--stone600);
+  margin-left: 20px;
+}
+
+.instructions-list-item {
+  padding-left: 10px;
+  margin: 18px 0;
+}
+.instructions-list-item::marker {
+  color: var(--brown800);
+  font-weight: bold;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-row {
+  border-bottom: 1px solid var(--stone150);
+}
+
+.table-row > td {
+  padding: 18px 0;
+  font-weight: bold;
+}
+
+.table-row > td:nth-child(1) {
+  color: var(--stone600);
+}
+.table-row > td:nth-child(2) {
+  color: var(--brown800);
+}
+
+.nutrition-desc {
+  color: var(--stone600);
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    .content {
+        width: 100%;
+        margin: initial;
+        border-radius: initial;
+    }
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: initial;
+        height: 240px;
+        object-fit: cover;
+    }
+    .content-banner {
+        margin-top: 225px;
+    }
+}
